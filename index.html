@@ -13,7 +13,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>レセフル - レセプト業務が劇的に楽になる｜医療機関の業務効率化</title>
+        <title>レセフル｜AI搭載 遠隔医療事務BPO｜月額約30万円〜</title>
+        <meta name="description" content="業界初のAI算定エージェント搭載。クリニック向け遠隔医療事務BPOサービス「レセフル」。他社の約1/3の料金で、リアルタイム算定・経営ダッシュボード・算定マニュアル納品まで。">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -6269,9 +6270,319 @@
                 }
             }
 
+            /* ===== Popup Modal ===== */
+            .popup-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            .popup-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            .popup-dialog {
+                background: white;
+                border-radius: 16px;
+                padding: 48px 40px;
+                max-width: 520px;
+                width: 90%;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                transform: translateY(20px);
+                transition: transform 0.3s ease;
+            }
+            .popup-overlay.active .popup-dialog {
+                transform: translateY(0);
+            }
+            .popup-dialog h2 {
+                font-size: 24px;
+                font-weight: 800;
+                color: #1a202c;
+                margin-bottom: 16px;
+                line-height: 1.4;
+            }
+            .popup-dialog p {
+                font-size: 16px;
+                color: #4a5568;
+                margin-bottom: 32px;
+                line-height: 1.7;
+            }
+            .popup-cta-primary {
+                display: inline-block;
+                background: linear-gradient(135deg, #FF1654, #FF4B7D);
+                color: white;
+                padding: 16px 40px;
+                border-radius: 50px;
+                font-size: 18px;
+                font-weight: 700;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(255,22,84,0.3);
+                margin-bottom: 16px;
+            }
+            .popup-cta-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(255,22,84,0.4);
+            }
+            .popup-cta-later {
+                display: block;
+                background: none;
+                border: none;
+                color: #64748b;
+                font-size: 14px;
+                cursor: pointer;
+                padding: 8px;
+                margin-top: 8px;
+                text-decoration: underline;
+            }
+            .popup-cta-later:hover {
+                color: #1a202c;
+            }
+
+            /* ===== Workflow Section ===== */
+            .workflow-section {
+                padding: 80px 0;
+                background: #fff;
+            }
+            .workflow-section .container {
+                max-width: 900px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .workflow-section h2 {
+                font-size: 36px;
+                font-weight: 800;
+                color: #1a202c;
+                margin-bottom: 16px;
+            }
+            .workflow-section .section-subtitle {
+                margin-bottom: 30px;
+            }
+            .workflow-section img {
+                max-width: 100%;
+                margin-top: 30px;
+            }
+            .workflow-note {
+                margin-top: 20px;
+                font-size: 15px;
+                color: #555;
+            }
+
+            /* ===== Why 30万 Section ===== */
+            .why-cheap-section {
+                padding: 80px 0;
+                background: #f8fafc;
+            }
+            .why-cheap-section h2 {
+                text-align: center;
+                font-size: 36px;
+                font-weight: 800;
+                color: #1a202c;
+                margin-bottom: 60px;
+            }
+            .why-cheap-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            .why-cheap-card {
+                padding: 40px 30px;
+                border-radius: 16px;
+                position: relative;
+            }
+            .why-cheap-card.traditional {
+                background: #f1f5f9;
+                border: 2px solid #e2e8f0;
+            }
+            .why-cheap-card.receful {
+                background: #fff5f7;
+                border: 2px solid #FF1654;
+            }
+            .why-cheap-card .card-icon {
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+            .why-cheap-card h3 {
+                font-size: 20px;
+                font-weight: 700;
+                color: #1e293b;
+                margin-bottom: 20px;
+            }
+            .why-cheap-card ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 20px;
+            }
+            .why-cheap-card li {
+                font-size: 15px;
+                color: #475569;
+                line-height: 1.8;
+                padding-left: 20px;
+                position: relative;
+                margin-bottom: 8px;
+            }
+            .why-cheap-card li::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                font-weight: 700;
+            }
+            .why-cheap-card.traditional li::before {
+                color: #64748b;
+            }
+            .why-cheap-card.receful li::before {
+                color: #FF1654;
+            }
+            .card-conclusion {
+                font-size: 15px;
+                font-weight: 700;
+                padding-top: 16px;
+                border-top: 2px solid rgba(0,0,0,0.1);
+            }
+            .card-conclusion.red {
+                color: #dc2626;
+            }
+            .card-conclusion.pink {
+                color: #FF1654;
+            }
+            .why-cheap-catchcopy {
+                text-align: center;
+                font-size: 22px;
+                color: #1e293b;
+                margin-top: 50px;
+                line-height: 1.6;
+            }
+            @media (max-width: 768px) {
+                .why-cheap-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            /* ===== Comparison Table Section ===== */
+            .comparison-section {
+                padding: 80px 0;
+                background: white;
+            }
+            .comparison-section h2 {
+                text-align: center;
+                font-size: 36px;
+                font-weight: 800;
+                color: #1a202c;
+                margin-bottom: 12px;
+            }
+            .comparison-section .section-subtitle {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .comparison-table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                margin-bottom: 40px;
+            }
+            .comparison-table {
+                width: 100%;
+                border-collapse: collapse;
+                min-width: 700px;
+                font-size: 14px;
+            }
+            .comparison-table th,
+            .comparison-table td {
+                padding: 14px 16px;
+                text-align: center;
+                border-bottom: 1px solid #e2e8f0;
+                vertical-align: middle;
+            }
+            .comparison-table thead th {
+                background: #f1f5f9;
+                font-weight: 700;
+                color: #475569;
+                font-size: 14px;
+            }
+            .comparison-table thead th.receful-col {
+                background: linear-gradient(135deg, #FF1654, #FF4B7D);
+                color: white;
+                position: relative;
+            }
+            .comparison-table thead th.receful-col .recommend-badge {
+                display: inline-block;
+                background: #FFE066;
+                color: #1e293b;
+                font-size: 11px;
+                padding: 2px 8px;
+                border-radius: 10px;
+                margin-left: 6px;
+                font-weight: 700;
+            }
+            .comparison-table td.receful-col {
+                background: #fff5f7;
+                font-weight: 700;
+            }
+            .comparison-table td.receful-col .price-highlight {
+                color: #FF1654;
+                font-size: 18px;
+                font-weight: 800;
+            }
+            .comparison-table td.receful-col .savings-badge {
+                display: inline-block;
+                background: #FF1654;
+                color: white;
+                font-size: 11px;
+                padding: 2px 8px;
+                border-radius: 10px;
+                margin-top: 4px;
+                font-weight: 600;
+            }
+            .comparison-table td:first-child {
+                text-align: left;
+                font-weight: 600;
+                color: #1e293b;
+                white-space: nowrap;
+            }
+            .comparison-note-box {
+                background: #f8fafc;
+                border: 2px solid #e2e8f0;
+                border-radius: 16px;
+                padding: 30px;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            .comparison-note-box h4 {
+                font-size: 18px;
+                font-weight: 700;
+                color: #1e293b;
+                margin-bottom: 12px;
+            }
+            .comparison-note-box p {
+                font-size: 15px;
+                color: #475569;
+                line-height: 1.8;
+            }
+
         </style>
     </head>
     <body>
+        <!-- Popup Modal -->
+        <div class="popup-overlay" id="popup-modal">
+            <div class="popup-dialog">
+                <h2>遠隔AI医療事務プラン、<br>初期費用0円キャンペーン中</h2>
+                <p>他社では月100万円超かかる遠隔医療事務を、約30万円〜で。</p>
+                <a href="form-1/" class="popup-cta-primary" target="_blank">無料シミュレーションを受ける</a>
+                <button class="popup-cta-later" id="popup-close">あとで見る</button>
+            </div>
+        </div>
+
         <!-- Header -->
         <header class="header">
             <div class="container">
@@ -6280,14 +6591,15 @@
                         <img src="images/logo.png" alt="レセフル">
                     </div>
                     <nav class="nav">
-                        <a href="#service">サービス特徴</a>
+                        <a href="#service">サービスの仕組み</a>
+                        <a href="#comparison">料金比較</a>
                         <a href="#pricing">料金プラン</a>
                         <a href="#flow">導入の流れ</a>
                         <a href="#faq">よくある質問</a>
                     </nav>
                     <div class="header-cta">
-                        <a href="form-2/" class="btn-header btn-outline" target="_blank">資料請求</a>
-                        <a href="form-1/" class="btn-header btn-primary" target="_blank">今すぐ導入</a>
+                        <a href="form-2/" class="btn-header btn-outline" target="_blank">資料ダウンロード</a>
+                        <a href="form-1/" class="btn-header btn-primary" target="_blank">無料シミュレーション</a>
                     </div>
                     
                     <!-- Mobile Menu Toggle -->
@@ -6302,12 +6614,13 @@
             <!-- Mobile Navigation -->
             <div class="mobile-nav">
                 <div class="mobile-nav-links">
-                    <a href="#service">サービス特徴</a>
+                    <a href="#service">サービスの仕組み</a>
+                    <a href="#comparison">料金比較</a>
                     <a href="#pricing">料金プラン</a>
                     <a href="#flow">導入の流れ</a>
                     <a href="#faq">よくある質問</a>
-                    <a href="form-2/" target="_blank">資料請求</a>
-                    <a href="form-1/" target="_blank">今すぐ導入</a>
+                    <a href="form-2/" target="_blank">資料ダウンロード</a>
+                    <a href="form-1/" target="_blank">無料シミュレーション</a>
                 </div>
             </div>
         </header>
@@ -6318,14 +6631,14 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <div class="hero-badge">
-                            <span style="font-size: 16px;">⏰</span>
-                            <span id="deadline-badge"></span>
+                            <span style="font-size: 16px;">🏥</span>
+                            <span>業界初 クリニック向けAI算定エージェント搭載</span>
                         </div>
-                        <h1 class="hero-title">医療事務の負担を、<br><span class="highlight" style="white-space: nowrap;">限りなくゼロに</span></h1>
-                        <p class="hero-subtitle">返戻・査定を防ぎ、スタッフの残業を削減。さらに経営分析で収益向上まで支援</p>
+                        <h1 class="hero-title">遠隔医療事務を、<br><span class="highlight" style="white-space: nowrap;">月額約30万円〜で。</span></h1>
+                        <p class="hero-subtitle">他社では月100万円超かかるリアルタイム遠隔算定を、自社開発AIで実現。代行だからコストが上がるのではなく、AIがあるから代行なのにコストが下がる。</p>
                         <div>
-                            <a href="form-2/" class="cta-button" target="_blank">まずは資料請求</a>
-                            <a href="form-1/" class="cta-button secondary" target="_blank">今すぐ導入相談</a>
+                            <a href="form-1/" class="cta-button" target="_blank">無料シミュレーションを受ける</a>
+                            <a href="form-2/" class="cta-button secondary" target="_blank">資料をダウンロード</a>
                         </div>
                     </div>
                     <div class="hero-image">
@@ -6402,170 +6715,180 @@
             </div>
         </section>
 
-        <!-- YouTube Media Section -->
-        <section class="youtube-media-section animate-on-scroll">
-            <div class="container">
-                <div class="youtube-media-header">
-                    <div class="youtube-media-badge">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                        YouTubeで紹介されました
-                    </div>
-                    <h2 class="youtube-media-title">メディア<span class="highlight">掲載実績</span></h2>
-                    <p class="youtube-media-subtitle">レセフルのサービスがYouTubeチャンネルで取り上げられました</p>
-                </div>
-                <div class="youtube-embed-wrapper">
-                    <div class="youtube-embed-decoration"></div>
-                    <div class="youtube-embed-container">
-                        <iframe
-                            src="https://www.youtube.com/embed/4sOshoEZnM8?si=keolPA7apaYXZKr5"
-                            title="レセフル紹介動画"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Challenges Section (経営課題セクション) -->
         <section class="challenges-section">
             <div class="container">
-                <h2 class="section-title">よくある<span class="highlight">3つの経営課題</span></h2>
-                <p class="section-subtitle">クリニック経営で直面する課題を、レセフルが解決します</p>
+                <h2 class="section-title">クリニック経営、<span class="highlight">こんなお悩みありませんか？</span></h2>
 
                 <div class="challenges-grid">
                     <!-- Challenge 1 -->
                     <div class="challenge-card">
                         <div class="challenge-number">01</div>
-                        <h3 class="challenge-title">収益を取りこぼしている</h3>
+                        <h3 class="challenge-title">医療事務スタッフが採れない・定着しない</h3>
                         <ul class="challenge-list">
-                            <li>算定漏れで本来得られる収益を逃している</li>
-                            <li>返戻・査定による損失が発生</li>
-                            <li>複雑な算定ルールを把握しきれない</li>
+                            <li>求人を出しても応募が来ない</li>
+                            <li>採用しても教育に3ヶ月、定着前に退職</li>
+                            <li>突然の退職で業務が止まるリスク</li>
                         </ul>
                     </div>
 
                     <!-- Challenge 2 -->
                     <div class="challenge-card">
                         <div class="challenge-number">02</div>
-                        <h3 class="challenge-title">月末月初の業務負担が大きい</h3>
+                        <h3 class="challenge-title">遠隔事務を検討したが、月80〜100万と言われた</h3>
                         <ul class="challenge-list">
-                            <li>残業が常態化し、スタッフが疲弊</li>
-                            <li>レセプト業務の属人化で引き継ぎが困難</li>
-                            <li>突然の退職で業務が止まるリスク</li>
+                            <li>1クリニック＝1担当者の専任モデルは人件費がそのまま料金に</li>
+                            <li>年商1億円のクリニックで売上の10%以上は導入できない</li>
+                            <li>結局「高すぎて諦めた」クリニックが大半</li>
                         </ul>
                     </div>
 
                     <!-- Challenge 3 -->
                     <div class="challenge-card">
                         <div class="challenge-number">03</div>
-                        <h3 class="challenge-title">経営の現状が見えない</h3>
+                        <h3 class="challenge-title">算定漏れで毎月20〜50万円の機会損失</h3>
                         <ul class="challenge-list">
-                            <li>レセプトを請求して終わり、データを活用できていない</li>
-                            <li>どの診療が収益性が高いのか分からない</li>
-                            <li>改善の糸口が見つからない</li>
+                            <li>人の目だけでは「取れるのに取っていない加算」を見つけられない</li>
+                            <li>複雑な算定ルールの変更に院内スタッフだけでは対応しきれない</li>
+                            <li>レセプトを請求して終わり、データを経営に活かせていない</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- CTA -->
                 <div class="challenges-cta">
-                    <p class="cta-text">これらの課題、<strong>レセフル</strong>がすべて解決します</p>
+                    <p class="cta-text">これらの課題、<strong>レセフルのAI BPO</strong>がすべて解決します</p>
                     <a href="#service" class="btn btn-primary">解決策を見る ↓</a>
                 </div>
             </div>
         </section>
 
-        <!-- Receful Cycle Section -->
-        <section class="receful-cycle-section" id="service">
-            <div class="container">
-                <h2 class="section-title">単なる事務代行<span class="highlight">ではありません</span></h2>
-                <p class="section-subtitle">実行・分析・改善の3つのサイクルで、クリニック経営を支援します</p>
-
-                <div class="cycle-grid">
-                    <!-- Cycle 1: 実行 -->
-                    <div class="cycle-card">
-                        <div class="cycle-number">1</div>
-                        <div class="cycle-label">実行</div>
-                        <h3 class="cycle-title">点検・修正を代行</h3>
-                        <p class="cycle-desc">独自システム×ベテランスタッフのダブルチェックで、返戻率1.3%以下の精度を実現。修正・再請求まで完全代行します。</p>
-                        <ul class="cycle-list">
-                            <li>高精度チェックシステム</li>
-                            <li>経験10年以上のスタッフ</li>
-                            <li>修正・再請求まで代行</li>
-                        </ul>
-                    </div>
-
-                    <!-- Cycle 2: 分析 -->
-                    <div class="cycle-card">
-                        <div class="cycle-number">2</div>
-                        <div class="cycle-label">分析</div>
-                        <h3 class="cycle-title">経営ダッシュボードで可視化</h3>
-                        <p class="cycle-desc">提携システム「レセコンアナライザー」を無料提供。診療行為別の収益や患者動向を一目で把握できます。</p>
-                        <ul class="cycle-list">
-                            <li>売上・患者動向を自動集計</li>
-                            <li>前月比・前年比を表示</li>
-                            <li>収益性の高い診療を特定</li>
-                        </ul>
-                    </div>
-
-                    <!-- Cycle 3: 改善 -->
-                    <div class="cycle-card">
-                        <div class="cycle-number">3</div>
-                        <div class="cycle-label">改善</div>
-                        <h3 class="cycle-title">マニュアル納品でスキルアップ</h3>
-                        <p class="cycle-desc">ミスの原因を分析し、貴院専用の算定マニュアルを作成・納品。院内全体のスキルアップを実現します。</p>
-                        <ul class="cycle-list">
-                            <li>貴院専用マニュアル作成</li>
-                            <li>頻出ミスの対策指導</li>
-                            <li>スタッフ研修サポート</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- CTA -->
-                <div class="section-cta">
-                    <a href="form-1/" class="btn btn-primary" target="_blank">無料で相談する</a>
-                    <a href="form-2/" class="btn btn-outline" target="_blank">資料請求</a>
-                </div>
+        <!-- Workflow Diagram Section (図式化) -->
+        <section class="workflow-section" id="workflow">
+            <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <h2 class="section-title">レセフルが支える、<span class="highlight">クリニックの1日</span></h2>
+                <p class="section-subtitle">受付・診察・会計のすべてのフェーズで、リモートセンターがバックオフィスを支えます</p>
+                <img src="images/レセフル図式化.png" alt="レセフルの業務フロー：受付→検査・診察→会計をリモートセンターが支援" style="max-width: 100%; margin-top: 30px;">
+                <p class="workflow-note">
+                    <strong>院内に必要なのは、受付と会計の対面スタッフだけ。</strong><br>
+                    請求業務はすべてレセフルリモートセンターが担います。
+                </p>
             </div>
         </section>
 
-        <!-- Remote Medical Office Section -->
-        <section class="remote-office-section">
+        <!-- Why 30万円 Section -->
+        <section class="why-cheap-section">
             <div class="container">
-                <div class="remote-office-content">
-                    <div class="remote-office-badge">🆕 新プラン</div>
-                    <h2 class="remote-office-title">「非常勤の即戦力医療事務」を<br><span class="highlight">リモートで確保</span></h2>
-                    <p class="remote-office-subtitle">遠隔医療事務プランなら、会計時にリアルタイムで算定サポート</p>
-
-                    <div class="remote-office-comparison">
-                        <div class="comparison-item bad">
-                            <h4>通常の採用</h4>
-                            <ul>
-                                <li><span class="icon-x">✕</span> 社会保険の負担あり</li>
-                                <li><span class="icon-x">✕</span> 採用コストあり</li>
-                                <li><span class="icon-x">✕</span> 教育コストあり</li>
-                                <li><span class="icon-x">✕</span> 離職リスクあり</li>
-                            </ul>
-                        </div>
-                        <div class="comparison-arrow">→</div>
-                        <div class="comparison-item good">
-                            <h4>遠隔医療事務プラン</h4>
-                            <ul>
-                                <li><span class="icon-check">✓</span> 社保なし</li>
-                                <li><span class="icon-check">✓</span> 採用費ゼロ</li>
-                                <li><span class="icon-check">✓</span> 教育不要</li>
-                                <li><span class="icon-check">✓</span> 離職リスクゼロ</li>
-                            </ul>
-                        </div>
+                <h2 class="section-title">なぜ、他社の3分の1の<span class="highlight">料金で実現できるのか</span></h2>
+                <div class="why-cheap-grid">
+                    <div class="why-cheap-card traditional">
+                        <div class="card-icon">✕</div>
+                        <h3>従来の遠隔医療事務</h3>
+                        <ul>
+                            <li>1クリニック ＝ 1人の専任スタッフ</li>
+                            <li>人件費40万円＋管理費・利益</li>
+                            <li>→ 月額80〜100万円</li>
+                        </ul>
+                        <p class="card-conclusion red">年商1億円のクリニックには導入不可能</p>
                     </div>
+                    <div class="why-cheap-card receful">
+                        <div class="card-icon">◎</div>
+                        <h3>レセフル AI BPOモデル</h3>
+                        <ul>
+                            <li>自社開発AI算定エージェントがチェック・通知を自動化</li>
+                            <li>1人のスタッフが複数クリニックを同時担当</li>
+                            <li>→ 月額約30万円〜</li>
+                        </ul>
+                        <p class="card-conclusion pink">年商1億円のクリニックで売上のわずか3%</p>
+                    </div>
+                </div>
+                <p class="why-cheap-catchcopy">「代行だからコストが上がる」のではなく、<br><strong style="font-size: 26px; color: #FF1654;">AIがあるから代行なのにコストが下がる。</strong></p>
+            </div>
+        </section>
 
-                    <p class="remote-office-note">導入時は1週間の現地サポートで業務フローを落とし込み</p>
-                    <a href="#pricing" class="btn btn-primary">料金プランを見る</a>
+        <!-- Pricing Comparison Table Section -->
+        <section class="comparison-section" id="comparison">
+            <div class="container">
+                <h2 class="section-title">遠隔医療事務の料金、<span class="highlight">比べてください</span></h2>
+                <p class="section-subtitle">自社開発AI算定エージェントで実現する、業界最安クラスの遠隔医療事務</p>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>A社（大手遠隔事務）</th>
+                                <th>B社（専任派遣型）</th>
+                                <th class="receful-col">レセフル AI BPO <span class="recommend-badge">おすすめ</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>500枚/月</strong></td>
+                                <td>約25万円</td>
+                                <td>約50万円</td>
+                                <td class="receful-col"><span class="price-highlight">190,000円</span><br><small>（基本7万+240円×500枚）</small><br><span class="savings-badge">A社より約6万円おトク</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>1,000枚/月</strong></td>
+                                <td>約45万円</td>
+                                <td>約60万円</td>
+                                <td class="receful-col"><span class="price-highlight">310,000円</span><br><small>（基本7万+240円×1,000枚）</small><br><span class="savings-badge">A社より約14万円おトク</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2,000枚/月</strong></td>
+                                <td>約100万円</td>
+                                <td>約120万円</td>
+                                <td class="receful-col"><span class="price-highlight">550,000円</span><br><small>（基本7万+240円×2,000枚）</small><br><span class="savings-badge">A社より約45万円おトク</span></td>
+                            </tr>
+                            <tr>
+                                <td>想定クリニック年商</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td class="receful-col">5,000万〜3億円</td>
+                            </tr>
+                            <tr>
+                                <td>初期費用</td>
+                                <td>約20万円</td>
+                                <td>約30〜50万円</td>
+                                <td class="receful-col"><strong style="color: #FF1654;">0円</strong>（キャンペーン中）</td>
+                            </tr>
+                            <tr>
+                                <td>AI算定チェック</td>
+                                <td>✕ なし</td>
+                                <td>✕ なし</td>
+                                <td class="receful-col"><strong style="color: #FF1654;">◎ 自社開発AI</strong></td>
+                            </tr>
+                            <tr>
+                                <td>リアルタイム算定</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td class="receful-col"><strong style="color: #FF1654;">◎ AI＋プロ</strong></td>
+                            </tr>
+                            <tr>
+                                <td>経営ダッシュボード</td>
+                                <td>✕ なし</td>
+                                <td>✕ なし</td>
+                                <td class="receful-col"><strong style="color: #FF1654;">◎ 無料提供</strong></td>
+                            </tr>
+                            <tr>
+                                <td>算定マニュアル納品</td>
+                                <td>✕ なし</td>
+                                <td>✕ なし</td>
+                                <td class="receful-col"><strong style="color: #FF1654;">◎ 貴院専用</strong></td>
+                            </tr>
+                            <tr>
+                                <td>採用・離職リスク</td>
+                                <td>なし</td>
+                                <td>派遣切替リスク</td>
+                                <td class="receful-col"><strong>なし</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="comparison-note-box">
+                    <h4>💡 なぜレセフルはこの価格を実現できるのか？</h4>
+                    <p>従来の遠隔医療事務は「1クリニック＝1人の専任スタッフ」が常識でした。人件費がそのまま料金に上乗せされるため、月額80〜100万円になるのは構造上避けられません。レセフルは自社開発のAI算定エージェントにより、1人のスタッフが複数のクリニックを同時に担当できるモデルを構築。コスト構造を根本から変えることで、品質を落とさず業界最安クラスの価格を実現しています。</p>
                 </div>
             </div>
         </section>
@@ -6578,60 +6901,75 @@
                 <!-- キャンペーン情報 -->
                 <div class="pricing-info" style="margin-bottom: 50px;">
                     <div class="campaign-badge">
-                        <span>🎉 期間限定キャンペーン：初期費用<span style="text-decoration: line-through; opacity: 0.7;">100,000円</span> → <strong>無料</strong></span>
+                        <span>🎉 キャンペーン中：全プラン初期費用0円 ＋ 遠隔AI医療事務プラン基本料金半額（70,000円/月）</span>
                     </div>
                 </div>
 
                 <!-- 料金プラン -->
                 <div class="pricing-plans-new">
-                    <!-- 点検プラン -->
-                    <div class="pricing-plan-new">
-                        <div class="plan-header-new light">
+                    <!-- 遠隔AI医療事務プラン（★おすすめ） -->
+                    <div class="pricing-plan-new popular" style="transform: scale(1.03);">
+                        <div class="popular-badge">
+                            <span>⭐ おすすめ</span>
+                        </div>
+                        <div class="plan-header-new recommended">
                             <div class="plan-icon">
-                                <img src="images/光.png" alt="点検プラン">
+                                <img src="images/星.png" alt="遠隔AI医療事務プラン">
                             </div>
-                            <h3 class="plan-title-new">点検プラン</h3>
-                            <p class="plan-subtitle-new">UKEファイル点検のみ</p>
+                            <h3 class="plan-title-new">遠隔AI医療事務プラン</h3>
+                            <p class="plan-subtitle-new">リモートで会計算定をリアルタイムサポート</p>
                         </div>
 
                         <div class="plan-body-new">
                             <div class="plan-price-new">
                                 <span class="price-label">基本料金</span>
-                                <span class="price-amount">40,000円</span>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <span style="text-decoration: line-through; color: #94a3b8; font-size: 16px;">140,000円</span>
+                                    <span class="price-amount" style="color: #FF1654;">70,000円</span>
+                                    <span style="background: #FF1654; color: white; padding: 2px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;">キャンペーン価格</span>
+                                </div>
                             </div>
 
                             <div class="plan-pricing-detail">
                                 <div class="pricing-item">
                                     <span class="pricing-type">従量料金</span>
-                                    <span class="pricing-value">120円/枚</span>
+                                    <span class="pricing-value">240円/枚</span>
                                 </div>
                             </div>
 
                             <div class="plan-features-new">
-                                <div class="feature-item-new">
+                                <div class="feature-item-new highlighted">
                                     <span class="feature-check">✓</span>
-                                    <span>UKEファイル点検</span>
+                                    <span>AI算定エージェントによるリアルタイム算定</span>
+                                </div>
+                                <div class="feature-item-new highlighted">
+                                    <span class="feature-check">✓</span>
+                                    <span>1週間の現地導入サポート</span>
                                 </div>
                                 <div class="feature-item-new">
                                     <span class="feature-check">✓</span>
-                                    <span>チャットサポート</span>
+                                    <span>クラウド型カルテにリモート接続</span>
                                 </div>
                                 <div class="feature-item-new">
                                     <span class="feature-check">✓</span>
-                                    <span>返戻・査定分析レポート</span>
+                                    <span>経営ダッシュボード</span>
+                                </div>
+                                <div class="feature-item-new">
+                                    <span class="feature-check">✓</span>
+                                    <span>算定マニュアル作成・納品</span>
                                 </div>
                             </div>
 
-                            <a href="form-1/" class="plan-button-new" target="_blank">このプランを選ぶ</a>
+                            <a href="form-1/" class="plan-button-new primary" target="_blank">無料シミュレーションを受ける</a>
                         </div>
                     </div>
 
                     <!-- 修正まるっとプラン -->
-                    <div class="pricing-plan-new popular">
-                        <div class="popular-badge">
-                            <span>⭐ 人気・おすすめ</span>
+                    <div class="pricing-plan-new">
+                        <div class="popular-badge" style="background: linear-gradient(135deg, #64748b, #475569);">
+                            <span>定番</span>
                         </div>
-                        <div class="plan-header-new recommended">
+                        <div class="plan-header-new" style="background: linear-gradient(135deg, #f8f9fa 0%, #e2e8f0 100%);">
                             <div class="plan-icon">
                                 <img src="images/星.png" alt="修正まるっとプラン">
                             </div>
@@ -6675,64 +7013,49 @@
                                 </div>
                             </div>
 
-                            <a href="form-1/" class="plan-button-new primary" target="_blank">このプランを選ぶ</a>
+                            <a href="form-1/" class="plan-button-new" target="_blank">無料シミュレーションを受ける</a>
                         </div>
                     </div>
 
-                    <!-- 遠隔医療事務プラン -->
-                    <div class="pricing-plan-new" style="border: 2px solid #5DADE2; position: relative;">
-                        <div class="popular-badge" style="background: linear-gradient(135deg, #5DADE2, #3498DB);">
-                            <span>🆕 New</span>
-                        </div>
-                        <div class="plan-header-new" style="background: linear-gradient(135deg, #E8F6FC 0%, #D1ECFA 100%);">
+                    <!-- 点検プラン -->
+                    <div class="pricing-plan-new">
+                        <div class="plan-header-new light">
                             <div class="plan-icon">
-                                <img src="images/星.png" alt="遠隔医療事務プラン">
+                                <img src="images/光.png" alt="点検プラン">
                             </div>
-                            <h3 class="plan-title-new">遠隔医療事務プラン</h3>
-                            <p class="plan-subtitle-new">リモートで会計算定をリアルタイムサポート</p>
+                            <h3 class="plan-title-new">点検プラン</h3>
+                            <p class="plan-subtitle-new">UKEファイル点検のみ</p>
                         </div>
 
                         <div class="plan-body-new">
                             <div class="plan-price-new">
                                 <span class="price-label">基本料金</span>
-                                <div style="display: flex; flex-direction: column; align-items: center;">
-                                    <span style="text-decoration: line-through; color: #94a3b8; font-size: 16px;">140,000円</span>
-                                    <span class="price-amount" style="color: #5DADE2;">70,000円</span>
-                                    <span style="background: #FF1654; color: white; padding: 2px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;">半年間キャンペーン</span>
-                                </div>
+                                <span class="price-amount">40,000円</span>
                             </div>
 
                             <div class="plan-pricing-detail">
                                 <div class="pricing-item">
                                     <span class="pricing-type">従量料金</span>
-                                    <span class="pricing-value">240円/枚</span>
+                                    <span class="pricing-value">120円/枚</span>
                                 </div>
                             </div>
 
                             <div class="plan-features-new">
-                                <div class="feature-item-new highlighted">
+                                <div class="feature-item-new">
                                     <span class="feature-check">✓</span>
-                                    <span>会計時にリアルタイム算定</span>
-                                </div>
-                                <div class="feature-item-new highlighted">
-                                    <span class="feature-check">✓</span>
-                                    <span>1週間の現地導入サポート</span>
+                                    <span>UKEファイル点検</span>
                                 </div>
                                 <div class="feature-item-new">
                                     <span class="feature-check">✓</span>
-                                    <span>クラウド型カルテにリモート接続</span>
+                                    <span>チャットサポート</span>
                                 </div>
                                 <div class="feature-item-new">
                                     <span class="feature-check">✓</span>
-                                    <span>経営ダッシュボード</span>
-                                </div>
-                                <div class="feature-item-new">
-                                    <span class="feature-check">✓</span>
-                                    <span>算定マニュアル作成・納品</span>
+                                    <span>返戻・査定分析レポート</span>
                                 </div>
                             </div>
 
-                            <a href="form-1/" class="plan-button-new" style="background: linear-gradient(135deg, #5DADE2, #3498DB); color: white;" target="_blank">このプランを選ぶ</a>
+                            <a href="form-1/" class="plan-button-new" target="_blank">無料シミュレーションを受ける</a>
                         </div>
                     </div>
                 </div>
@@ -6741,20 +7064,111 @@
                 <div style="margin-top: 60px; background: #f8fafc; border-radius: 16px; padding: 40px; text-align: center;">
                     <h3 style="font-size: 20px; color: #1e293b; margin-bottom: 20px;">月額費用シミュレーション（レセプト1,000枚の場合）</h3>
                     <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                        <div style="background: white; padding: 20px 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 2px solid #FF1654;">
+                            <p style="font-size: 14px; color: #64748b; margin-bottom: 5px;">遠隔AI医療事務プラン</p>
+                            <p style="font-size: 24px; font-weight: 700; color: #FF1654;">310,000円<span style="font-size: 14px; font-weight: 400;">（税別）</span></p>
+                        </div>
+                        <div style="background: white; padding: 20px 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <p style="font-size: 14px; color: #64748b; margin-bottom: 5px;">修正まるっとプラン</p>
+                            <p style="font-size: 24px; font-weight: 700; color: #1e293b;">280,000円<span style="font-size: 14px; font-weight: 400;">（税別）</span></p>
+                        </div>
                         <div style="background: white; padding: 20px 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                             <p style="font-size: 14px; color: #64748b; margin-bottom: 5px;">点検プラン</p>
                             <p style="font-size: 24px; font-weight: 700; color: #1e293b;">160,000円<span style="font-size: 14px; font-weight: 400;">（税別）</span></p>
                         </div>
-                        <div style="background: white; padding: 20px 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 2px solid #FF1654;">
-                            <p style="font-size: 14px; color: #64748b; margin-bottom: 5px;">修正まるっとプラン</p>
-                            <p style="font-size: 24px; font-weight: 700; color: #FF1654;">280,000円<span style="font-size: 14px; font-weight: 400;">（税別）</span></p>
-                        </div>
-                        <div style="background: white; padding: 20px 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 2px solid #5DADE2;">
-                            <p style="font-size: 14px; color: #64748b; margin-bottom: 5px;">遠隔医療事務プラン</p>
-                            <p style="font-size: 24px; font-weight: 700; color: #5DADE2;">310,000円<span style="font-size: 14px; font-weight: 400;">（税別）</span></p>
-                        </div>
                     </div>
                     <p style="margin-top: 20px; font-size: 14px; color: #64748b;">※ 常勤・非常勤スタッフの採用・教育コストを考えると、安定したコストで専門人材を確保可能です</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Receful Cycle Section -->
+        <section class="receful-cycle-section" id="service">
+            <div class="container">
+                <h2 class="section-title">AI × プロの3サイクルで、<span class="highlight">クリニック経営を支援</span></h2>
+                <p class="section-subtitle">実行・分析・改善の3つのサイクルで、クリニック経営を支援します</p>
+
+                <div class="cycle-grid">
+                    <!-- Cycle 1: 実行 -->
+                    <div class="cycle-card">
+                        <div class="cycle-number">1</div>
+                        <div class="cycle-label">実行</div>
+                        <h3 class="cycle-title">点検・修正を代行</h3>
+                        <p class="cycle-desc">AI算定エージェント×ベテランスタッフのダブルチェックで、返戻率1.3%以下の精度を実現。会計時にはリアルタイムで算定チェック・加算漏れを自動通知。修正・再請求まで完全代行します。</p>
+                        <ul class="cycle-list">
+                            <li>AI算定エージェントによるリアルタイムチェック</li>
+                            <li>経験10年以上のスタッフ</li>
+                            <li>修正・再請求まで代行</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cycle 2: 分析 -->
+                    <div class="cycle-card">
+                        <div class="cycle-number">2</div>
+                        <div class="cycle-label">分析</div>
+                        <h3 class="cycle-title">経営ダッシュボードで可視化</h3>
+                        <p class="cycle-desc">提携システム「レセコンアナライザー」を無料提供。診療行為別の収益や患者動向を一目で把握できます。</p>
+                        <ul class="cycle-list">
+                            <li>売上・患者動向を自動集計</li>
+                            <li>前月比・前年比を表示</li>
+                            <li>収益性の高い診療を特定</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cycle 3: 改善 -->
+                    <div class="cycle-card">
+                        <div class="cycle-number">3</div>
+                        <div class="cycle-label">改善</div>
+                        <h3 class="cycle-title">マニュアル納品でスキルアップ</h3>
+                        <p class="cycle-desc">ミスの原因を分析し、貴院専用の算定マニュアルを作成・納品。院内全体のスキルアップを実現します。</p>
+                        <ul class="cycle-list">
+                            <li>貴院専用マニュアル作成</li>
+                            <li>頻出ミスの対策指導</li>
+                            <li>スタッフ研修サポート</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="section-cta">
+                    <a href="form-1/" class="btn btn-primary" target="_blank">無料シミュレーションを受ける</a>
+                    <a href="form-2/" class="btn btn-outline" target="_blank">資料をダウンロード</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Remote Medical Office Section -->
+        <section class="remote-office-section">
+            <div class="container">
+                <div class="remote-office-content">
+                    <div class="remote-office-badge">遠隔医療事務</div>
+                    <h2 class="remote-office-title">「非常勤の即戦力医療事務」を<br><span class="highlight">リモートで確保</span></h2>
+                    <p class="remote-office-subtitle">遠隔医療事務プランなら、会計時にリアルタイムで算定サポート</p>
+
+                    <div class="remote-office-comparison">
+                        <div class="comparison-item bad">
+                            <h4>通常の採用</h4>
+                            <ul>
+                                <li><span class="icon-x">✕</span> 社会保険の負担あり</li>
+                                <li><span class="icon-x">✕</span> 採用コストあり</li>
+                                <li><span class="icon-x">✕</span> 教育コストあり</li>
+                                <li><span class="icon-x">✕</span> 離職リスクあり</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item good">
+                            <h4>遠隔医療事務プラン</h4>
+                            <ul>
+                                <li><span class="icon-check">✓</span> 社保なし</li>
+                                <li><span class="icon-check">✓</span> 採用費ゼロ</li>
+                                <li><span class="icon-check">✓</span> 教育不要</li>
+                                <li><span class="icon-check">✓</span> 離職リスクゼロ</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="remote-office-note">導入時は1週間の現地サポートで業務フローを落とし込み</p>
+                    <a href="#pricing" class="btn btn-primary">料金プランを見る</a>
                 </div>
             </div>
         </section>
@@ -6788,11 +7202,44 @@
             </div>
         </section>
 
+        <!-- YouTube Media Section (移動) -->
+        <section class="youtube-media-section animate-on-scroll">
+            <div class="container">
+                <div class="youtube-media-header">
+                    <div class="youtube-media-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        YouTubeで紹介されました
+                    </div>
+                    <h2 class="youtube-media-title">メディア<span class="highlight">掲載実績</span></h2>
+                    <p class="youtube-media-subtitle">レセフルのサービスがYouTubeチャンネルで取り上げられました</p>
+                </div>
+                <div class="youtube-embed-wrapper">
+                    <div class="youtube-embed-decoration"></div>
+                    <div class="youtube-embed-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/4sOshoEZnM8?si=keolPA7apaYXZKr5"
+                            title="レセフル紹介動画"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Testimonial Section -->
         <section class="testimonial-section">
             <div class="container">
                 <div class="testimonial-header">
                     <h2>導入クリニック様から<span class="highlight">高い評価</span>をいただいています</h2>
+                    <div style="display: flex; justify-content: center; gap: 16px; margin-top: 20px; flex-wrap: wrap;">
+                        <span style="background: #FFF5F7; border: 1px solid #FF1654; color: #FF1654; padding: 8px 16px; border-radius: 50px; font-size: 14px; font-weight: 600;">返戻率 1.3%に改善</span>
+                        <span style="background: #FFF5F7; border: 1px solid #FF1654; color: #FF1654; padding: 8px 16px; border-radius: 50px; font-size: 14px; font-weight: 600;">スタッフ残業ゼロ</span>
+                        <span style="background: #FFF5F7; border: 1px solid #FF1654; color: #FF1654; padding: 8px 16px; border-radius: 50px; font-size: 14px; font-weight: 600;">マニュアル納品済み</span>
+                    </div>
                 </div>
 
                 <!-- Testimonial 1: しおや消化器内科クリニック -->
@@ -6834,7 +7281,7 @@
             <div class="container">
                 <div class="cta-content-simple">
                     <div class="cta-buttons-simple">
-                        <a href="form-1/" class="cta-btn-single" target="_blank">導入相談をする</a>
+                        <a href="form-1/" class="cta-btn-single" target="_blank">無料シミュレーションを受ける</a>
                     </div>
                 </div>
             </div>
@@ -6844,6 +7291,21 @@
         <section class="faq" id="faq">
             <div class="container">
                 <h2 class="section-title">よくある<span class="highlight">ご質問</span></h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">他社で月80〜100万と言われました。なぜレセフルは約30万円〜なのですか？</div>
+                    <div class="faq-answer">従来の遠隔医療事務は「1クリニック＝1人の専任スタッフ」のため、人件費がそのまま料金に反映されていました。レセフルは自社開発のAI算定エージェントにより、1人のスタッフが複数のクリニックを同時に担当。コスト構造を根本から変えることで、品質を維持しながら業界最安クラスの価格を実現しています。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">リアルタイム算定とは具体的に何をしてくれるのですか？</div>
+                    <div class="faq-answer">会計時に、レセフルのリモートセンターがクラウド型電子カルテにリアルタイムで接続し、算定チェック・加算漏れの指摘・病名確認を行います。AI算定エージェントが自動で算定候補を通知し、ベテランスタッフが最終確認。患者様をお待たせすることなく、正確な会計処理をサポートします。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">院内にレセプト担当のスタッフがいなくても大丈夫ですか？</div>
+                    <div class="faq-answer">はい。導入時に1週間の現地サポートで業務フローを構築し、以降はすべてリモートで完結します。院内には受付・会計の対面対応スタッフのみ配置いただければ、請求業務はレセフルリモートセンターがすべて担います。</div>
+                </div>
 
                 <div class="faq-item">
                     <div class="faq-question">対応電子カルテは何でしょうか？</div>
@@ -6856,13 +7318,13 @@
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">導入までどのくらいの期間がかかりますか？</div>
-                    <div class="faq-answer">お申し込みから最短2週間でサービスを開始できます。電子カルテとの連携設定や運用フローの確認などを含めても、通常1ヶ月以内には本格稼働が可能です。ただし、レセプト請求が間に合わないなどのご依頼でしたら迅速に対応するのでご連絡ください。</div>
+                    <div class="faq-question">料金体系について詳しく教えてください</div>
+                    <div class="faq-answer">遠隔AI医療事務プランの場合、基本料金（月額70,000円・キャンペーン価格）＋従量料金（240円×レセプト枚数）のシンプルな構成です。初期費用はキャンペーン中につき0円。例えばレセプト1,000枚/月のクリニックで月額約310,000円（税別）。年商1億円規模のクリニックで、売上のわずか約3%です。</div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">料金体系について詳しく教えてください</div>
-                    <div class="faq-answer">基本料金（月額40,000円）＋従量料金（処理件数×単価）のシンプルな料金体系です。初期費用は期間限定で無料。詳細なお見積りは、貴院の規模や処理件数に応じて個別にご提案いたします。</div>
+                    <div class="faq-question">導入までどのくらいの期間がかかりますか？</div>
+                    <div class="faq-answer">お申し込みから最短2週間でサービスを開始できます。電子カルテとの連携設定や運用フローの確認などを含めても、通常1ヶ月以内には本格稼働が可能です。ただし、レセプト請求が間に合わないなどのご依頼でしたら迅速に対応するのでご連絡ください。</div>
                 </div>
 
                 <div class="faq-item">
@@ -6878,23 +7340,23 @@
                 <h2 class="section-title animate-on-scroll">お問い合わせ・資料請求</h2>
                 <div class="cta-container">
                     <div class="cta-content">
-                        <h3 class="cta-title">今すぐ始めませんか？</h3>
-                        <p class="cta-description">レセフルで医院の業務効率化を実現しましょう。まずは資料請求から、お気軽にお問い合わせください。</p>
-                        
+                        <h3 class="cta-title">まずは無料シミュレーションから</h3>
+                        <p class="cta-description">貴院のレセプト枚数から、月額費用と削減効果をシミュレーション。お気軽にお問い合わせください。</p>
+
                         <div class="cta-buttons-container">
                             <a href="form-1/" class="cta-btn primary" target="_blank">
                                 <span class="btn-icon">🚀</span>
-                                <span class="btn-text">すぐ導入する</span>
-                                <span class="btn-subtitle">申し込み</span>
+                                <span class="btn-text">無料シミュレーションを受ける</span>
+                                <span class="btn-subtitle">最短2週間で導入可能</span>
                             </a>
-                            
+
                             <a href="form-2/" class="cta-btn secondary" target="_blank">
                                 <span class="btn-icon">📋</span>
-                                <span class="btn-text">資料請求</span>
-                                <span class="btn-subtitle">詳細資料をダウンロード</span>
+                                <span class="btn-text">資料をダウンロード</span>
+                                <span class="btn-subtitle">サービス詳細・料金表・導入事例</span>
                             </a>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -6911,7 +7373,7 @@
                     
                     
                     <div class="copyright">
-                        <p>&copy; 2025 ドットエフ株式会社. All Rights Reserved.</p>
+                        <p>&copy; 2026 ドットエフ株式会社. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -6919,11 +7381,36 @@
 
         <!-- Fixed CTA Buttons -->
         <div class="fixed-cta-container">
-            <a href="form-1/" class="cta-button" target="_blank">すぐ導入</a>
-            <a href="form-2/" class="cta-button secondary" target="_blank">資料請求</a>
+            <a href="form-1/" class="cta-button" target="_blank">無料シミュレーション</a>
+            <a href="form-2/" class="cta-button secondary" target="_blank">資料ダウンロード</a>
         </div>
 
         <script>
+            // Popup Modal Logic
+            (function() {
+                var POPUP_KEY = 'reseful_popup_closed';
+                var stored = localStorage.getItem(POPUP_KEY);
+                var now = Date.now();
+                var overlay = document.getElementById('popup-modal');
+                var closeBtn = document.getElementById('popup-close');
+
+                if (!stored || (now - parseInt(stored, 10)) > 24 * 60 * 60 * 1000) {
+                    setTimeout(function() {
+                        overlay.classList.add('active');
+                    }, 500);
+                }
+
+                function closePopup() {
+                    overlay.classList.remove('active');
+                    localStorage.setItem(POPUP_KEY, String(Date.now()));
+                }
+
+                closeBtn.addEventListener('click', closePopup);
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) closePopup();
+                });
+            })();
+
             // レセプト提出期限の自動計算
             (function() {
                 // 次の提出期限を計算（基本10日、土日の場合は前倒し）
