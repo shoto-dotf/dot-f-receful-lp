@@ -6576,70 +6576,67 @@
                 /* 正社員vsレセフル比較 */
                 .vs-grid-layout {
                     grid-template-columns: 1fr !important;
-                    gap: 20px !important;
+                    gap: 16px !important;
+                }
+                .vs-grid-layout table td {
+                    font-size: 13px !important;
+                    padding: 8px 0 !important;
+                }
+                .vs-grid-layout table td:last-child {
+                    font-size: 13px !important;
+                }
+                .vs-grid-layout tr:last-child td:last-child {
+                    font-size: 18px !important;
                 }
 
                 /* Popup */
                 .popup-dialog {
-                    padding: 32px 24px;
+                    padding: 28px 20px;
                     width: 92%;
                 }
                 .popup-dialog h2 {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 .popup-dialog p {
                     font-size: 14px;
-                    margin-bottom: 24px;
+                    margin-bottom: 20px;
                 }
                 .popup-cta-primary {
-                    padding: 14px 28px;
-                    font-size: 16px;
+                    padding: 14px 24px;
+                    font-size: 15px;
                     display: block;
                 }
 
                 /* Workflow */
                 .workflow-section {
-                    padding: 60px 0;
-                }
-                .workflow-section h2 {
-                    font-size: 28px;
-                }
-                .workflow-note {
-                    font-size: 14px;
+                    padding: 50px 0;
                 }
 
                 /* Why Cheap */
                 .why-cheap-section {
-                    padding: 60px 0;
-                }
-                .why-cheap-section h2 {
-                    font-size: 24px;
-                    margin-bottom: 40px;
+                    padding: 50px 0;
                 }
                 .why-cheap-card {
-                    padding: 30px 20px;
+                    padding: 24px 16px;
                 }
                 .why-cheap-card h3 {
-                    font-size: 18px;
+                    font-size: 17px;
                 }
                 .why-cheap-catchcopy {
-                    font-size: 18px;
-                    margin-top: 30px;
+                    font-size: 16px;
+                    margin-top: 24px;
                 }
                 .why-cheap-catchcopy strong {
-                    font-size: 22px !important;
+                    font-size: 20px !important;
                 }
 
                 /* Comparison Table */
                 .comparison-section {
-                    padding: 60px 0;
-                }
-                .comparison-section h2 {
-                    font-size: 24px;
+                    padding: 50px 0;
                 }
                 .comparison-table {
                     font-size: 12px;
-                    min-width: 600px;
+                    min-width: 580px;
                 }
                 .comparison-table th,
                 .comparison-table td {
@@ -6653,18 +6650,101 @@
                     padding: 1px 6px;
                 }
                 .comparison-note-box {
-                    padding: 20px;
+                    padding: 20px 16px;
                 }
                 .comparison-note-box h4 {
-                    font-size: 16px;
+                    font-size: 15px;
                 }
                 .comparison-note-box p {
-                    font-size: 14px;
+                    font-size: 13px;
                 }
 
                 /* Pricing plan popular scale reset */
                 .pricing-plan-new.popular {
                     transform: scale(1) !important;
+                }
+
+                /* Section titles */
+                .section-title {
+                    font-size: 24px !important;
+                    margin-bottom: 30px !important;
+                    line-height: 1.4;
+                }
+                .section-subtitle {
+                    font-size: 15px;
+                    margin-bottom: 30px;
+                }
+
+                /* Hero buttons horizontal on mobile */
+                .hero-text > div[style] {
+                    flex-direction: column !important;
+                    align-items: center;
+                }
+                .hero-text .cta-button {
+                    width: 100%;
+                    max-width: 300px;
+                    text-align: center;
+                }
+
+                /* Challenge cards */
+                .challenges-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+                .challenge-card {
+                    padding: 28px 20px;
+                }
+                .challenge-title {
+                    font-size: 18px;
+                }
+
+                /* Cycle cards */
+                .cycle-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+                .cycle-card {
+                    padding: 28px 20px;
+                }
+                .cycle-card img {
+                    max-height: 150px !important;
+                }
+
+                /* Testimonial */
+                .testimonial-two-column {
+                    grid-template-columns: 1fr !important;
+                    gap: 20px !important;
+                }
+                .testimonial-card {
+                    padding: 28px 20px;
+                }
+                .testimonial-title {
+                    font-size: 18px;
+                }
+                .doctor-photo-large {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                /* FAQ */
+                .faq-question {
+                    font-size: 15px;
+                }
+                .faq-answer {
+                    font-size: 14px;
+                }
+
+                /* CTA Section */
+                .cta-title {
+                    font-size: 22px !important;
+                }
+                .cta-description {
+                    font-size: 14px;
+                }
+
+                /* Remote office comparison */
+                .remote-office-title {
+                    font-size: 22px;
                 }
             }
 
@@ -6673,16 +6753,25 @@
                     padding: 24px 16px;
                 }
                 .popup-dialog h2 {
-                    font-size: 18px;
-                }
-                .why-cheap-catchcopy {
                     font-size: 16px;
                 }
-                .why-cheap-catchcopy strong {
-                    font-size: 18px !important;
+                .section-title {
+                    font-size: 20px !important;
                 }
-                .comparison-section h2 {
-                    font-size: 20px;
+                .hero-title {
+                    font-size: 24px !important;
+                }
+                .why-cheap-catchcopy {
+                    font-size: 14px;
+                }
+                .why-cheap-catchcopy strong {
+                    font-size: 17px !important;
+                }
+                .challenge-title {
+                    font-size: 16px;
+                }
+                .cycle-title {
+                    font-size: 17px;
                 }
             }
 
@@ -6750,7 +6839,7 @@
                             <span>業界初 クリニック向けAI算定エージェント搭載</span>
                         </div>
                         <h1 class="hero-title">遠隔医療事務を、<br><span class="highlight">月額約19万円〜</span>で。</h1>
-                        <p class="hero-subtitle">自社開発のAI算定エージェントで、リアルタイム遠隔算定を実現。<br>算定漏れゼロ・レセプト残業ゼロを、驚きの低コストで。</p>
+                        <p class="hero-subtitle">自社開発のAI算定エージェントで、リアルタイム遠隔算定を実現。算定漏れゼロ・レセプト残業ゼロを、驚きの低コストで。</p>
                         <div style="display: flex; gap: 16px; flex-wrap: wrap;">
                             <a href="form-1/" class="cta-button" style="padding: 16px 32px; font-size: 16px;" target="_blank">無料シミュレーションを受ける</a>
                             <a href="form-2/" class="cta-button secondary" style="padding: 16px 32px; font-size: 16px;" target="_blank">資料をダウンロード</a>
