@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZYS3KW08E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EZYS3KW08E');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>導入申し込みフォーム</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .required {
+            color: #e74c3c;
+            margin-left: 4px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .name-group {
+            display: flex;
+            gap: 16px;
+        }
+
+        .name-group .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .name-group {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .name-group .form-group {
+                margin-bottom: 24px;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>導入申し込みフォーム</h1>
+            <p>貴院の情報をご入力ください</p>
+        </div>
+
+        <div class="form-container">
+            <form id="applicationForm" method="POST" action="https://script.google.com/macros/s/AKfycbxItAKS_64qDomToMw9pVUviXkRFxmHYmUp7fqmUZ65HBTS-r95ZTWA8qgP76nP6UTh/exec">
+                <div class="name-group">
+                    <div class="form-group">
+                        <label for="lastName">姓<span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <div class="error-message" id="lastNameError">姓を入力してください</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">名<span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <div class="error-message" id="firstNameError">名を入力してください</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError">有効なメールアドレスを入力してください</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="hospitalName">貴院名<span class="required">*</span></label>
+                    <input type="text" id="hospitalName" name="hospitalName" required>
+                    <div class="error-message" id="hospitalNameError">貴院名を入力してください</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">役職<span class="required">*</span></label>
+                    <input type="text" id="position" name="position" required>
+                    <div class="error-message" id="positionError">役職を入力してください</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">電話番号<span class="required">*</span></label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    <div class="error-message" id="phoneNumberError">電話番号を入力してください</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="remarks">備考</label>
+                    <textarea id="remarks" name="remarks" placeholder="ご質問やご要望がございましたらご記入ください"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">送信する</button>
+                <p style="font-size: 12px; color: #555; margin-top: 12px; line-height: 1.6;">
+                    <strong>個人情報の取り扱いについて：</strong>
+                    お客様にご入力いただいた個人情報は、資料送付およびお問い合わせ対応の目的でのみ使用し、適切に管理いたします。
+                    第三者への提供は行いません。
+                </p>
+            </form>
+
+            <div class="loading" id="loading">
+                <p>送信中...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // バリデーション
+            if (!validateForm()) {
+                return;
+            }
+
+            // ローディング表示
+            document.getElementById('loading').style.display = 'block';
+            this.style.display = 'none';
+
+            // フォームデータを収集
+            const formData = new FormData(this);
+
+            // GASに送信
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                // サンクスページへリダイレクト
+                window.location.href = 'thanks.html';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('送信中にエラーが発生しました。もう一度お試しください。');
+                document.getElementById('loading').style.display = 'none';
+                document.querySelector('.form-container form').style.display = 'block';
+            });
+        });
+
+        function validateForm() {
+            let isValid = true;
+            const fields = [
+                { id: 'lastName', errorId: 'lastNameError' },
+                { id: 'firstName', errorId: 'firstNameError' },
+                { id: 'email', errorId: 'emailError' },
+                { id: 'hospitalName', errorId: 'hospitalNameError' },
+                { id: 'position', errorId: 'positionError' },
+                { id: 'phoneNumber', errorId: 'phoneNumberError' }
+            ];
+
+            // エラーメッセージをリセット
+            fields.forEach(field => {
+                document.getElementById(field.errorId).style.display = 'none';
+                document.getElementById(field.id).style.borderColor = '#e1e8ed';
+            });
+
+            // 各フィールドをチェック
+            fields.forEach(field => {
+                const value = document.getElementById(field.id).value.trim();
+                if (!value) {
+                    document.getElementById(field.errorId).style.display = 'block';
+                    document.getElementById(field.id).style.borderColor = '#e74c3c';
+                    isValid = false;
+                }
+            });
+
+            // メールアドレスの形式チェック
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email && !emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                document.getElementById('emailError').textContent = '有効なメールアドレスを入力してください';
+                document.getElementById('email').style.borderColor = '#e74c3c';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
