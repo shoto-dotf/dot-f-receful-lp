@@ -218,7 +218,7 @@
                 background: rgba(255, 255, 255, 0.98);
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
-                padding: var(--spacing-md) 0;
+                padding: 8px 0;
                 box-shadow: var(--shadow-sm);
                 position: fixed;
                 width: 100%;
@@ -227,9 +227,9 @@
                 transition: all var(--transition-base);
                 border-bottom: var(--border-width) solid rgba(255, 22, 84, 0.1);
             }
-            
+
             .header.scrolled {
-                padding: var(--spacing-sm) 0;
+                padding: 6px 0;
                 box-shadow: var(--shadow-md);
                 background: rgba(255, 255, 255, 0.99);
             }
@@ -256,8 +256,8 @@
             }
             
             .logo img {
-                height: 120px;
-                max-width: 400px;
+                height: 48px;
+                max-width: 200px;
                 object-fit: contain;
                 transition: all 0.3s ease;
                 image-rendering: -webkit-optimize-contrast;
@@ -419,14 +419,15 @@
             }
 
             .btn-header {
-                padding: 8px 16px;
+                padding: 8px 20px;
                 border-radius: 20px;
                 text-decoration: none;
-                font-weight: 500;
-                font-size: 12px;
+                font-weight: 600;
+                font-size: 13px;
                 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 position: relative;
                 overflow: hidden;
+                white-space: nowrap;
             }
             
             .btn-outline {
@@ -5139,8 +5140,8 @@
                 }
                 
                 .logo img {
-                    height: 65px;
-                    max-width: 220px;
+                    height: 44px;
+                    max-width: 180px;
                 }
             }
             
@@ -5260,8 +5261,8 @@
                 }
                 
                 .logo img {
-                    height: 55px;
-                    max-width: 180px;
+                    height: 40px;
+                    max-width: 160px;
                 }
                 
                 .pricing-tables {
@@ -7019,9 +7020,6 @@
                             <span>★ おすすめ</span>
                         </div>
                         <div class="plan-header-new recommended">
-                            <div class="plan-icon">
-                                <img src="images/星.png" alt="遠隔AI医療事務プラン">
-                            </div>
                             <h3 class="plan-title-new">遠隔AI医療事務プラン</h3>
                             <p class="plan-subtitle-new">リモートで会計算定をリアルタイムサポート</p>
                         </div>
@@ -7076,9 +7074,6 @@
                             <span>定番</span>
                         </div>
                         <div class="plan-header-new" style="background: linear-gradient(135deg, #f8f9fa 0%, #e2e8f0 100%);">
-                            <div class="plan-icon">
-                                <img src="images/星.png" alt="修正まるっとプラン">
-                            </div>
                             <h3 class="plan-title-new">修正まるっとプラン</h3>
                             <p class="plan-subtitle-new">クラウド修正+マニュアル+経営分析</p>
                         </div>
@@ -7126,9 +7121,6 @@
                     <!-- 点検プラン -->
                     <div class="pricing-plan-new">
                         <div class="plan-header-new light">
-                            <div class="plan-icon">
-                                <img src="images/光.png" alt="点検プラン">
-                            </div>
                             <h3 class="plan-title-new">点検プラン</h3>
                             <p class="plan-subtitle-new">UKEファイル点検のみ</p>
                         </div>
