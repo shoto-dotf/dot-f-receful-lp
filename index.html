@@ -1215,8 +1215,16 @@
                 animation: logos-slide 25s linear infinite;
             }
 
+            .logos-track.reverse {
+                animation: logos-slide-reverse 25s linear infinite;
+            }
+
             .logos-track:hover {
                 animation-play-state: paused;
+            }
+
+            .logos-marquee-wrapper + .logos-marquee-wrapper {
+                margin-top: 24px;
             }
 
             @keyframes logos-slide {
@@ -1225,6 +1233,15 @@
                 }
                 100% {
                     transform: translateX(-50%);
+                }
+            }
+
+            @keyframes logos-slide-reverse {
+                0% {
+                    transform: translateX(-50%);
+                }
+                100% {
+                    transform: translateX(0);
                 }
             }
 
@@ -6946,6 +6963,30 @@
                     </div>
                     <div class="logo-item">
                         <img src="images/nihonbashi_logo03.png" alt="日本橋クリニック">
+                    </div>
+                </div>
+            </div>
+            <div class="logos-marquee-wrapper">
+                <div class="logos-track reverse">
+                    <!-- 1セット目 -->
+                    <div class="logo-item">
+                        <img src="images/tsuwabuki_clinic.png" alt="吹田駅前つわぶき内科・整形外科">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/hatano_clinic.png" alt="はたのクリニック">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/higashinesato_clinic.png" alt="東根さとう消化器内科・内視鏡クリニック">
+                    </div>
+                    <!-- 2セット目（ループ用） -->
+                    <div class="logo-item">
+                        <img src="images/tsuwabuki_clinic.png" alt="吹田駅前つわぶき内科・整形外科">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/hatano_clinic.png" alt="はたのクリニック">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/higashinesato_clinic.png" alt="東根さとう消化器内科・内視鏡クリニック">
                     </div>
                 </div>
             </div>
